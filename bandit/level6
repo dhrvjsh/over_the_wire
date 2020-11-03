@@ -1,0 +1,9 @@
+to find the file which contain the password in the server with is owned by user bandit7 and group bandit6
+
+go to the root directory and type
+
+find ./ -user bandit7 -group bandit6 -size 33c
+
+we will find the pass in the file in the location ./var/lib/dpkg/info/bandit7.password
+
+HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs

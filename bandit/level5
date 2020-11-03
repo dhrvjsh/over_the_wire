@@ -1,0 +1,6 @@
+to find the file in all the directories we can use find command
+
+"find ./ -type f -readable ! -executable -size 1033c"
+
+DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+

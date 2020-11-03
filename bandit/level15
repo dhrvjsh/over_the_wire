@@ -1,0 +1,8 @@
+for finding the password for level16 we need to submit the password of level15 over ssl
+
+we user openssl
+
+openssl s_client -connect localhost:30001
+
+
+cluFn7wTiGryunymYOu4RcffSxQluehd
