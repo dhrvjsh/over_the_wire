@@ -1,0 +1,10 @@
+Just run command : "diff password.new password.olf
+and the output of the command is 
+
+42c42
+< kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+---
+> w0Yfolrc5bwjS4qw5mq1nnQi6mF03bii
+
+the password for bandit18 is kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+because this was the only line that was changed

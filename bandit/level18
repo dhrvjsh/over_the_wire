@@ -1,0 +1,7 @@
+In this level we know that .bashrc had been edited to log us out from ssh
+
+so we can enter the command after the ssh command like this to get the password in the readme file
+
+ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme
+
+password for bandit19 is IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
