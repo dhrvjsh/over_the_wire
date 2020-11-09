@@ -1,4 +1,4 @@
-In this challenge we need to invatigate the cron job and also write a script in order to get the passwd
+In this challenge we need to investigate the cron job and also write a script in order to get the passwd
 
 first we see the cron job which points to the script in /usr/bin/cronjob_bandit24
 
