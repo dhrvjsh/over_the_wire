@@ -1,0 +1,36 @@
+In this level we need to investigate the cron job that is running 
+
+after seeing cron job named cronjob_bandit23 at /etc/cron.d/cronjob_bandit23
+we can see a job /usr/bin/cronjob_bandit23.sh &> /dev/null
+
+after seeing the file at /usr/bin/cronjob_bandit22.sh
+this is written in that script
+
+#!/bin/bash
+
+myname=$(whoami)
+mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)
+
+echo "Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget"
+
+cat /etc/bandit_pass/$myname > /tmp/$mytarget
+
+what this script does is storing the current user in variable named myname
+and encypt that username into md5 and copying that password of bandit23 in file 
+which is the md5 encypt name of the current user
+
+what we can do to extract the name of the user in md5 is
+
+we can run this command in our own terminal
+
+myname=bandit23
+mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)
+echo $mytarget
+
+this will give us the file name 8ca319486bfbbc3663ea0fbe81326349
+
+now we can run command on the target machine
+
+cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+
+and this willl give us the password for bandit23 which is jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n

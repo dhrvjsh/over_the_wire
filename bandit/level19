@@ -1,0 +1,7 @@
+In this level we know there is file named bandit20-do with suid bit set
+
+we can use this to extract the password for the next level
+
+./bandit20-do cat /etc/bandit_pass/bandit20
+
+the password for bandit20 is GbKksEFF4yrVs6il55v6gwY5aVje5f0j

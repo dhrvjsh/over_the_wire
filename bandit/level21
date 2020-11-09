@@ -1,0 +1,10 @@
+In this level we need to investigate cron job running
+
+after seeing cron job named cronjob_bandit22 at /etc/cron.d/cronjob_bandit22
+we can see a job /usr/bin/cronjob_bandit22.sh &> /dev/null
+
+after seeing the file at /usr/bin/cronjob_bandit22.sh 
+it is a script which is cating the password in file in tmp directory
+
+after seeing that file we get the password for bandit22 
+the password for bandit22 is Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI

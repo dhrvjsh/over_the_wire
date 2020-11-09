@@ -1,0 +1,9 @@
+In this level we get a binary file with a suid bit set and by running that binary it says
+that we had to connect it to a port and if it gets the corect password of the bandit20 then it 
+will send the password for the next level
+
+so we ssh into another terminal and run nc listner on port 4444
+then we run the binary ./suconnect 4444
+and on the nc reverse shell we send the password of bandit20 and in return we the password for the next level
+
+the password for bandit21 is gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
