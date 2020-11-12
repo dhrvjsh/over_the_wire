@@ -1,0 +1,14 @@
+In this we just try to get shell on the system
+we just repeat the steps in the previous level and get into vi texteditor
+
+after getting into vi 
+we enter the command
+:set shell=/bin/bash
+:shell
+
+and we will get a shell with user bandit26
+
+now we can see that there is binary named bandit27-do with suid bit set
+we can get password for bandit27 with this binary
+bandit2-do cat /etc/bandit_pass/bandit27
+the password for bandit27 user is 3ba3118a22e93127a4ed485be72ef5ea

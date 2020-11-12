@@ -1,0 +1,25 @@
+In this level after we ssh to bandit 25 we get a ssh private key of bandit26 
+and we know from the site that bandit26 user dosn't have a /bin/bash login
+so after login via private we get exitied of the ssh
+
+so we see the passwd file in order to view what is happening while ssh into bandit26
+
+after viewing passwd file we can see that it is pointing to /usr/bin/showtext
+
+after seeing that file
+#!/bin/sh
+
+export TERM=linux
+
+more ~/text.txt
+exit 0
+
+we can see that it is opening text.txt file with more command
+we know that we can run commands with more command
+
+so we make our ssh terminal window small so that more command will buffer the content of the file
+and after ssh into bandit26 we just enter "v" keyword and this will open vi text editor inside more command
+now what we can do is open another file in vi editor with entering ":" and then r /etc/bandit_pass/bandit26
+
+and this will give us the password for user bandit26
+the password for bandit26 is 5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
