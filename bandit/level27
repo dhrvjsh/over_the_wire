@@ -1,0 +1,12 @@
+In this level we will create a folder in the tmp directory and clone the repository in that directory
+
+making a directory in tmp using mkdir command
+mkdir -p /tmp/repository
+
+go in that new directory and type the git clone command to clone the repository
+
+git clone "ssh://bandit27-git@localhost/home/bandit27-git/repo"
+
+this will create a directory named repo and in that directory we will get our password for the next level
+
+the password for bandit28 is 0ef186ac70e04ea33b4c1853d2526fa2

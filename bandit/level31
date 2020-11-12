@@ -1,0 +1,19 @@
+In this level again we have to clone a repository like in the previous challenges we did
+
+after cloning the directory we can see that the password is not present in the current file
+
+In this level we had to push a file to the repository
+
+so we create a file named key.txt with the content "May I come in?
+
+and we will push this file with the command
+
+git add . and then git commit and we see a message that there is nothing to commit
+
+so we see that there is a .gitignore file and it contains a *.txt so we use -f 
+
+git add -f key.txt and then git commit and add a commit message
+
+and then git push and now we get our password for the next level
+
+the password for bandit32 is 56a9bf19c63d650ce78e6ec0354ee45e

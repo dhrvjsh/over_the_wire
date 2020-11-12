@@ -1,0 +1,13 @@
+In this level again we have to clone a repository like in the previous challenge we did
+
+after cloning the repository we see a README.md file and in that file the password was not written
+
+so we do a git log command and that show us the changes log
+
+one of the log contains a message as "add missing data"
+
+for seeing that changes we can do git show <git sha1 identifier>
+
+this will give us the password which was changes in the latter commits
+
+the password for bandit29 is bbc96594b4e001778eee9975372716b2

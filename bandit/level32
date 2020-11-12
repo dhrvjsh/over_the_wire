@@ -1,0 +1,11 @@
+In this level we ssh into a wierd place saying that "WELCOME TO THE UPPERCASE SHELL"
+
+everything just type changes to UPPERCASE
+
+so in order to get around this we just enter "$0"
+and now we get a regular shell 
+so we just run whoami and we can see that we are bandit33
+
+so we just cat the password of bandit33 from /etc/bandit_pass/bandit33
+
+the password of bandit33 is c9c3199ddf4121b10cf581a98d51caee

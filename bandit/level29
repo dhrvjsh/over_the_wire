@@ -1,0 +1,18 @@
+In this level again we have to clone a repository like in the previous challenges we did
+
+after cloning the directory we can see that the password is not present in the current file
+
+so we see that there are other branches for this
+so for knowing what branches are there
+we enter command git branche -after
+this we show all the branche of this project
+
+not going to a branch name "remotes/origin/dev" by entering command git checkout remotes/origin/dev
+
+this we get us in that branch
+now we will enter a command git log for seeing the commits and see the last commit by entering the command
+git show <commit sha1 identifier>
+
+this will give us the password for the next level
+
+the password for bandit30 is 5b90576bedb2cc04c86a9e924ce42faf

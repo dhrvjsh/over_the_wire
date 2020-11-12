@@ -1,0 +1,15 @@
+In this level again we have to clone a repository like in the previous challenges we did
+
+after cloning the directory we can see that the password is not present in the current file
+
+we tried all the steps we use in the previous challenges but no luck so far
+
+there is .git directory in the cloned repository and entering that we can see the git internals
+
+there is a file named "packed-refs"
+
+seeing that file we can see there is another branch named refs/tags/secret and there is also a hash for this
+
+so we do git show <hash> and we see a another hash and that is the password for the next level
+
+the password for bandit31 is 47e603bb428404d265f59c42920d81e5
